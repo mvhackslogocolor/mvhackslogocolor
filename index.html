@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "index.css">
+</head>
+
+<body>    
+    <img src = "Vohacks.png"width = "500" id = "changing">
+
+    <img src = "MHacks.png" width = "500">
+
+    <input type="range" min="0" max="255" value="100" class="slider" id="r">
+    <input type="range" min="0" max="255" value="0" class="slider" id="g">
+    <input type="range" min="0" max="255" value="0" class="slider" id="b">
+    <script>
+    var rs = document.getElementById("r");
+var gs = document.getElementById("g");
+var bs = document.getElementById("b");
+var imgy = document.getElementById("changing");
+
+console.log("hi");
+function colorchange() {
+    imgy.style.backgroundColor = `rgb(${rs.value}, ${gs.value}, ${bs.value})`;
+    console.log("asdf");
+    rs.style.backgroundImage = `linear-gradient(to right, black, rgb(255, ${gs.value}, ${bs.value}))`;
+    gs.style.backgroundImage = `linear-gradient(to right, black, rgb(${rs.value}, 255, ${bs.value}))`;
+    bs.style.backgroundImage = `linear-gradient(to right, black, rgb(${rs.value}, ${gs.value}, 255))`;
+}
+
+window.setInterval(colorchange, 100);
+    </script>
+</body>
+</html>

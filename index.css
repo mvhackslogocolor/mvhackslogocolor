@@ -1,0 +1,41 @@
+#changing {
+    background-color: green;
+}
+img {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    top: 0;
+    left: 25vw;
+}
+
+.slider {
+    margin-top: 40vw;
+    -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 50px;
+  margin-left: 10vw;
+  width: 20vw;
+  border-radius: 25px; 
+  
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 50px; /* Set a specific slider handle width */
+    height: 50px; /* Slider handle height */
+    background: #cccccc; /* Green background */
+    border-radius: 25px;
+  }
+
+#r {
+    background-image: linear-gradient(to right, black, #FF0000);
+}
+
+#g {
+    background-image: linear-gradient(to right, black, #00FF00);
+}
+
+#b {
+    background-image: linear-gradient(to right, black, #0000FF);
+}
