@@ -12,11 +12,13 @@
     <input type="range" min="0" max="255" value="100" class="slider" id="r">
     <input type="range" min="0" max="255" value="0" class="slider" id="g">
     <input type="range" min="0" max="255" value="0" class="slider" id="b">
+    <p id = "color"></p>
     <script>
     var rs = document.getElementById("r");
 var gs = document.getElementById("g");
 var bs = document.getElementById("b");
 var imgy = document.getElementById("changing");
+var para = document.getElementById("color");
 
 console.log("hi");
 function colorchange() {
@@ -25,6 +27,8 @@ function colorchange() {
     rs.style.backgroundImage = `linear-gradient(to right, black, rgb(255, ${gs.value}, ${bs.value}))`;
     gs.style.backgroundImage = `linear-gradient(to right, black, rgb(${rs.value}, 255, ${bs.value}))`;
     bs.style.backgroundImage = `linear-gradient(to right, black, rgb(${rs.value}, ${gs.value}, 255))`;
+
+    para.innerHTML = `rgb(${rs.value}, ${gs.value}, ${bs.value})`;
 }
 
 window.setInterval(colorchange, 100);
