@@ -39,3 +39,8 @@ img {
 #b {
     background-image: linear-gradient(to right, black, #0000FF);
 }
+
+#color {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
